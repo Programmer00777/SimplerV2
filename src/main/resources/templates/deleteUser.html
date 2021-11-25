@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title th:text="${title}">Default title</title>
+</head>
+<body>
+	<h1>Enter the ID of the user to be removed</h1>
+	<form th:method="POST">
+		<p>ID:</p>
+		<input type="text" name="userId"/> <br>
+		<input type="submit" value="Delete user"/>
+	</form>
+	
+	<a href="/">Lobby page</a> <br>
+	<a href="/getAll">All the users</a> <br>
+	<a href="/add">Add a new user</a> <br>
+	<a href="/update">Update user</a>
+</body>
+</html>

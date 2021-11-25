@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title th:text="${title}">Default title</title>
+</head>
+<body>
+	<h1>All the users</h1>
+	<ul>
+		<li th:each="user : ${users}">
+			<span th:text="${user}"></span>
+			<a th:href="@{/{id}/update(id=${user.getId()})}"> Update </a>
+		</li>
+	</ul>
+	<a href="/">Lobby page</a> <br>
+	<a href="/add">Add new user</a> <br>
+	<a href="/update">Update user</a> <br>
+	<a href="/delete">Delete user</a>
+</body>
+</html>
