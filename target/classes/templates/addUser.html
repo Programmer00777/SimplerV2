@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8"/>
@@ -20,5 +20,38 @@
 	<a href="/getAll">All the users</a> <br>
 	<a href="/update">Update user</a> <br>
 	<a href="/delete">Delete user</a>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title th:text="${title}">Default title</title>
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+	<header>
+		<p class="logo">The Simpler.</p>
+		<nav>
+			<ul class="nav__links">
+				<li><a href="/">Lobby page</a> <br></li>
+				<li><a href="/getAll">All the users</a> <br></li>
+				<li><a href="/delete">Delete user</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<h1 class="mainText animate__animated animate__fadeInLeft">Add a new user</h1>
+	<form class="inputForm animate__animated animate__fadeInRight" method="POST" th:object="${user}">
+		<p class="subText">Name:</p>
+		<input type="text" name="userName" th:field="*{name}" placeholder="User's name" class="inputField"/> <br>
+		<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error__message"></div>
+		<p class="subText">Email:</p>
+		<input type="text" name="userEmail" th:field="*{email}" placeholder="User's email" class="inputField"/> <br>
+		<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error__message">
+		</div>
+		<input type="submit" value="Add user" class="submitButton"/>
+	</form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8"/>
@@ -16,5 +16,33 @@
 	<a href="/getAll">All the users</a> <br>
 	<a href="/add">Add a new user</a> <br>
 	<a href="/update">Update user</a>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title th:text="${title}">Default title</title>
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+	<header>
+		<p class="logo">The Simpler.</p>
+		<nav>
+			<ul class="nav__links">
+				<li><a href="/">Lobby page</a> <br></li>
+				<li><a href="/getAll">All the users</a> <br></li>
+				<li><a href="/add">Create user</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<h1 class="mainText animate__animated animate__fadeInLeft">Enter the ID of the user to be removed</h1>
+	<form th:method="POST" class="inputForm animate__animated animate__fadeInRight">
+		<p class="subText">ID:</p>
+		<input type="text" name="userId" class="inputField"/> <br>
+		<input type="submit" value="Delete user" class="submitButton"/>
+	</form>
 </body>
 </html>

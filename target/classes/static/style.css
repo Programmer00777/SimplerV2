@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+}
+
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.nav__links li a {
+	text-decoration: none;
+	color: black;
+	font-family: Monaco;
+	font-size: 14px;
+}
+
+.nav__links li a:hover {
+	text-decoration: underline;
+	transition: 2s;
+}
+
+p.logo {
+	font-family: Monaco;
+}
+
+h1.mainText {
+	font-family: Monaco;
+	text-align: center;
+	margin-top: 7%;
+	margin-bottom: 0;
+}
+
+p.subText {
+	font-family: monospace;
+	text-align: center;
+
+}
+
+div.buttons {
+	margin-top: 7%;
+	text-align: center;
+}
+
+a.button {
+	color: black;
+	border: solid 1px;
+	border-radius: 5px;
+	padding: 10px 15px;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+	display: inline-block;
+	font-family: Monaco;
+	background-color: white;
+	margin-bottom: 12px;
+
+}
+
+a.button:hover {
+	background-color: lightgray;
+	transition: 0.5s;
+}
+
+form.inputForm {
+	margin-top: 7%;
+	text-align: center;
+}
+
+input.submitButton {
+	border: solid 1px;
+	border-radius: 5px;
+	background-color: white;
+	padding: 10px 20px;
+	margin-top: 1%;
+	text-decoration: none;
+	cursor: pointer;
+	margin-bottom: 10%;
+}
+
+input.submitButton:hover {
+	background-color: lightgray;
+	transition: 0.5s;
+}
+
+input.inputField {
+	font-size: 14px;
+	padding: 15px 30px;
+	margin: 2% 2%;
+	box-sizing: border-box;
+}
+
+li.list__of__users {
+	margin-top: 10%;
+	text-align: center;
+	list-style: none;
+}
+
+li.list__of__users a {
+	border: solid 1px;
+	padding: 7px 12px;
+	border-radius: 5px;
+	background-color: green;
+	color: white;
+	font-family: Monaco;
+	text-decoration: none;
+}
+
+li.list__of__users a:hover {
+	background-color: lightgreen;
+	transition: 0.5s;
+}
+
+li.list__of__users span {
+	font-family: Monaco;
+
+}
+
+div.error__message {
+	padding: 10px 5px;
+	font-family: Monaco;
+	color: red;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 2%;
+}

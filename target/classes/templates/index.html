@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8"/>
@@ -10,5 +10,23 @@
 	<a href="/getAll"> All the users </a> <br>
 	<a href="/update">Update user</a> <br>
 	<a href="/delete">Delete user</a>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title th:text="${title}">Default title</title>
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+	<h1 class="mainText animate__animated animate__fadeInLeft">The Simpler</h1>
+	<p class="subText animate__animated animate__fadeInRight">Hello! Choose an operation your want to execute</p>
+	<div class="buttons animate__animated animate__fadeInLeft">
+		<a href="/getAll" class="button"> All the users </a> <br>
+		<a href="/add" class="button"> Create user </a> <br>
+		<a href="/delete" class="button">Delete user</a>
+	</div>
 </body>
 </html>

@@ -60,9 +60,13 @@ public class UserController {
 	// processes entered id into the form to remove user from the database
 	@PostMapping("/delete")
 	public String deleteUserPageProcessing(@RequestParam Integer userId) {
-		userRepository.deleteById(userId);
 		
-		return "redirect:/getAll";
+		if (userRepository.existsById(userId)) {
+			userRepository.deleteById(userId);
+			return "redirect:/getAll";
+		} else {
+			return "redirect:/delete";
+		}
 	}
 	
 	// returns a view for user updating
@@ -83,31 +87,6 @@ public class UserController {
         userRepository.save(userObject);
         return "redirect:/getAll";
     }
-	
-	// processes updating of user
-//	@PostMapping("/update")
-//	public String updateUserPageProcessing(@ModelAttribute @Valid User user, BindingResult bindingResult, Model model) {
-//		
-//		boolean existsById = userRepository.existsById(user.getId());
-//		
-//		model.addAttribute("user", user);
-//		
-//		if (bindingResult.hasErrors()) {
-//			return "updateUser";
-//		}
-//		
-//		if (existsById) {
-//			User userToBeUpdated = userRepository.findById(user.getId()).get();
-//			userToBeUpdated = user;
-//			userRepository.save(userToBeUpdated);
-//			return "redirect:/getAll";
-//		} else {
-//			model.addAttribute("existsById", existsById);
-//			model.addAttribute("error", "The user with id = " + user.getId() + " doesn't exist");
-//			return "redirect:/updateUser";
-//		}
-//	}
-	
 	
 	// returns a view with all users
 	@GetMapping(path = "/getAll")
