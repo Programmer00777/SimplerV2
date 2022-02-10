@@ -40,7 +40,7 @@
 			</ul>
 		</nav>
 	</header>
-	<h1 class="mainText animate__animated animate__fadeInLeft">Enter id of a user to be updated</h1>
+	<h1 class="mainText animate__animated animate__fadeInLeft">User update</h1>
 	<form th:method="POST" th:object="${user}" class="inputForm animate__animated animate__fadeInRight">
 		<p class="subText">Name:</p>
 			<input type="text" name="userName" th:field="*{name}" class="inputField"/> <br>
@@ -51,8 +51,8 @@
 		<input type="submit" value="Update user" class="submitButton"/>
 	</form>
 	
-	<a href="/">Lobby page</a> <br>
-	<a href="/getAll">All the users</a> <br>
-	<a href="/delete">Delete user</a>
+<!--	<a href="/">Lobby page</a> <br>-->
+<!--	<a href="/getAll">All the users</a> <br>-->
+<!--	<a href="/delete">Delete user</a>-->
 </body>
 </html>
