@@ -93,6 +93,7 @@ input.submitButton {
 	text-decoration: none;
 	cursor: pointer;
 	margin-bottom: 10%;
+	color: black;
 }
 
 input.submitButton:hover {
@@ -164,6 +165,14 @@ div.error__message {
 		margin-bottom: 0;
 	}
 
+}
+
+@media (min-width: 280px) and (max-width: 460px) {
+	body {
+		background-image: url("malte-schmidt-enGr5YbjQKQ-unsplash.jpg");
+		background-repeat: no-repeat;
+		background-size: 200%;
+	}
 }
 
 @media (min-width: 401px) and (max-width: 560px) {
