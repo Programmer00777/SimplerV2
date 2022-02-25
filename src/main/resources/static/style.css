@@ -4,6 +4,12 @@
 	padding: 0;
 }
 
+body {
+	background-image: url("malte-schmidt-enGr5YbjQKQ-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -32,15 +38,12 @@ header {
 	transition: 2s;
 }
 
-p.logo {
-	font-family: Monaco;
-}
-
 h1.mainText {
 	font-family: Monaco;
 	text-align: center;
 	margin-top: 7%;
 	margin-bottom: 0;
+	color: white;
 }
 
 p.subText {
@@ -48,6 +51,7 @@ p.subText {
 	text-align: center;
 	font-size: 24px;
 	padding-top: 2%;
+	color: white;
 }
 
 div.buttons {
@@ -108,10 +112,11 @@ li.list__of__users {
 	margin-top: 5%;
 	text-align: center;
 	list-style: none;
+	color: white;
 }
 
 li.list__of__users a {
-	border: solid 1px;
+	/*border: solid 1px;*/
 	padding: 7px 12px;
 	border-radius: 5px;
 	background-color: green;

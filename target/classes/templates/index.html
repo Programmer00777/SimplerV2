@@ -1,67 +1,64 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="en" class="h-100">
 <head>
-	<!-- Required meta tags -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title th:text="${title}">Default title</title>
+	<title>Home</title>
 
-	<!-- This style must be at the top -->
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
 
 	<!-- Bootstrap core CSS -->
 	<link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+
+
+	<!-- Custom styles for this template -->
+	<link href="https://getbootstrap.com/docs/5.1/examples/cover/cover.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex h-100 text-center text-white bg-dark">
 
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">The Simpler.</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav me-auto mb-2 mb-md-0">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/getAll">All the users</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/add">Create user</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/delete">Delete user</a>
-					</li>
-				</ul>
+	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+		<header class="mb-auto">
+			<div>
+				<h3 class="float-md-start mb-0">Hello:)</h3>
+				<nav class="nav nav-masthead justify-content-center float-md-end">
+					<a class="nav-link active" aria-current="page" href="/">Home</a>
+					<a class="nav-link" href="/getAll">All the users</a>
+					<a class="nav-link" href="/add">Create user</a>
+					<a class="nav-link" href="/delete">Delete user</a>
+				</nav>
 			</div>
-		</div>
-	</nav>
+		</header>
 
-	<h1 class="mainText animate__animated animate__fadeInLeft">The Simpler</h1>
-	<p class="subText animate__animated animate__fadeInRight">Hello! Choose an operation your want to execute</p>
-	<div class="buttons animate__animated animate__fadeInLeft">
-		<a href="/getAll" class="button"> All the users </a> <br>
-		<a href="/add" class="button"> Create user </a> <br>
-		<a href="/delete" class="button">Delete user</a>
+		<main class="px-3">
+			<h1>The Simpler.</h1>
+			<p class="lead">Go to the navigation at the top of this page and choose an option you want.</p>
+			<p class="lead">
+				<a href="https://github.com/Programmer00777/SimplerV2.git" class="btn btn-lg btn-secondary fw-bold border-white bg-white"> GitHub repo </a>
+			</p>
+		</main>
+
+		<footer class="mt-auto text-white-50">
+			<p>Developed by Chernikov. LinkedIn profile <a href="https://www.linkedin.com/in/sergey-chernikov-161242230/">click</a>.</p>
+			<p>Instagram Code.Lib <a href="https://www.instagram.com/code.lib/">click</a>.</p>
+		</footer>
 	</div>
 
-	<!-- Scripts related to Bootstrap -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-			crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-			crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-			crossorigin="anonymous"></script>
-	<script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
