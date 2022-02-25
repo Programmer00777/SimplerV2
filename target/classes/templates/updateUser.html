@@ -1,46 +1,50 @@
-<!-- <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-	<meta charset="UTF-8"/>
-	<title th:text="${title}">Default title</title>
-</head>
-<body>
-	<h1>Enter id of a user to be updated</h1>
-	<form th:method="POST" th:object="${user}">
-		<p>Name:</p>
-			<input type="text" name="userName" th:field="*{name}"/> <br>
-			<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
-		<p>Email:</p>
-			<input type="text" name="userEmail" th:field="*{email}"/> <br>
-			<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
-		<input type="submit" value="Update user"/>
-	</form>
-	
-	<a href="/">Lobby page</a> <br>
-	<a href="/getAll">All the users</a> <br>
-	<a href="/delete">Delete user</a>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="UTF-8"/>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<title th:text="${title}">Default title</title>
-	<link rel="stylesheet" href="/style.css">
+
+	<!-- This style must be at the top -->
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
 	<header>
-		<p class="logo">The Simpler.</p>
-		<nav>
-			<ul class="nav__links">
-				<li><a href="/">Lobby page</a> <br></li>
-				<li><a href="/getAll">All the users</a> <br></li>
-				<li><a href="/delete">Delete user</a></li>
-			</ul>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">The Simpler.</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav me-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="/">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/getAll">All the users</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/add">Create user</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/delete">Delete user</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	</header>
-	<h1 class="mainText animate__animated animate__fadeInLeft">Enter id of a user to be updated</h1>
+	<h1 class="mainText animate__animated animate__fadeInLeft">User update</h1>
 	<form th:method="POST" th:object="${user}" class="inputForm animate__animated animate__fadeInRight">
 		<p class="subText">Name:</p>
 			<input type="text" name="userName" th:field="*{name}" class="inputField"/> <br>
@@ -50,9 +54,17 @@
 			<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error__message"></div>
 		<input type="submit" value="Update user" class="submitButton"/>
 	</form>
-	
-	<a href="/">Lobby page</a> <br>
-	<a href="/getAll">All the users</a> <br>
-	<a href="/delete">Delete user</a>
+
+	<!-- Scripts related to Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+	<script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

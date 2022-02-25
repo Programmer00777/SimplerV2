@@ -46,11 +46,12 @@ h1.mainText {
 p.subText {
 	font-family: monospace;
 	text-align: center;
-
+	font-size: 24px;
+	padding-top: 2%;
 }
 
 div.buttons {
-	margin-top: 7%;
+	margin-top: 2%;
 	text-align: center;
 }
 
@@ -66,7 +67,7 @@ a.button {
 	font-family: Monaco;
 	background-color: white;
 	margin-bottom: 12px;
-
+	width: 150px;
 }
 
 a.button:hover {
@@ -75,7 +76,7 @@ a.button:hover {
 }
 
 form.inputForm {
-	margin-top: 7%;
+	margin-top: 4%;
 	text-align: center;
 }
 
@@ -91,7 +92,8 @@ input.submitButton {
 }
 
 input.submitButton:hover {
-	background-color: lightgray;
+	background-color: green;
+	color: white;
 	transition: 0.5s;
 }
 
@@ -103,7 +105,7 @@ input.inputField {
 }
 
 li.list__of__users {
-	margin-top: 10%;
+	margin-top: 5%;
 	text-align: center;
 	list-style: none;
 }
@@ -135,4 +137,60 @@ div.error__message {
 	text-align: center;
 	margin: auto;
 	margin-bottom: 2%;
+}
+
+@media (min-width: 651px) and (max-width: 1000px) {
+
+	h1.mainText {
+		font-family: Monaco;
+		text-align: center;
+		margin-top: 10%;
+		margin-bottom: 0;
+	}
+
+}
+
+@media (min-width: 561px) and (max-width: 650px) {
+
+	h1.mainText {
+		font-family: Monaco;
+		text-align: center;
+		margin-top: 15%;
+		margin-bottom: 0;
+	}
+
+}
+
+@media (min-width: 401px) and (max-width: 560px) {
+
+	h1.mainText {
+		font-family: Monaco;
+		text-align: center;
+		font-size: 24px;
+		margin-top: 15%;
+		margin-bottom: 0;
+	}
+
+	p.subText {
+		font-family: monospace;
+		text-align: center;
+		font-size: 20px;
+	}
+
+}
+
+@media (min-width: 280px) and (max-width: 400px) {
+	h1.mainText {
+		font-family: Monaco;
+		text-align: center;
+		font-size: 24px;
+		margin-top: 20%;
+		margin-bottom: 0;
+	}
+
+	p.subText {
+		font-family: monospace;
+		text-align: center;
+		font-size: 20px;
+	}
 }
