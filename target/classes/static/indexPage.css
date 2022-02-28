@@ -1,0 +1,38 @@
+body {
+    /*background-image: url("malte-schmidt-enGr5YbjQKQ-unsplash.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100%;*/
+
+    width: 100%;
+    min-height: 100vh;
+    background: #c850c0;
+    background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
+    background: -o-linear-gradient(45deg, #4158d0, #c850c0);
+    background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
+    background: linear-gradient(45deg, #4158d0, #c850c0);
+}
+
+.mt-auto {
+    color: #cbcbcb;
+}
+
+.mt-auto a {
+    color: #dadada;
+}
+
+.mt-auto a:hover {
+    color: white;
+}
+
+.github__button {
+    color: black;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+    padding: 2% 2%;
+    text-decoration: none;
+    font-family: "Chalkboard SE";
+}
+p.lead {
+    margin-bottom: 10%;
+}

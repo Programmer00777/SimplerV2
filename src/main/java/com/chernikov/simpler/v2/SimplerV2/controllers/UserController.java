@@ -15,12 +15,23 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.chernikov.simpler.v2.SimplerV2.models.User;
 import com.chernikov.simpler.v2.SimplerV2.repositories.UserRepository;
 
+/**
+ * Controller for the {@link com.chernikov.simpler.v2.SimplerV2.models.User} entity.
+ *
+ * @author sergeychernikov
+ * @version 2.0
+ */
+
 @Controller
 public class UserController {
 
+	private final UserRepository userRepository;
+
 	@Autowired
-	private UserRepository userRepository;
-	
+	public UserController(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+
 	// return a lobby page
 	@GetMapping(value = "/")
 	public String indexPage(Model model) {
@@ -78,23 +89,24 @@ public class UserController {
 	}
 	
 	@PostMapping("/{id}/update")
-    public String update(@ModelAttribute("user") @Valid User user, BindingResult bindingResult, @PathVariable("id") Integer id) {
+    public String update(@ModelAttribute("user") User user, BindingResult bindingResult, @PathVariable("id") Integer id) {
+
 		if (bindingResult.hasErrors()) {
 			return "redirect:/{id}/update";
 		}
-		User userObject = userRepository.findById(id).get();
-        userObject = user;
-        userRepository.save(userObject);
+
+        userRepository.save(user);
         return "redirect:/getAll";
     }
 	
 	// returns a view with all users
-	@GetMapping(path = "/getAll")
-	public String getAllUsers(Model model) {
+	@GetMapping("/getAll")
+	public String getAllUsersPage(Model model) {
+
 		Iterable<User> users = userRepository.findAll();
 		model.addAttribute("users", users);
-		model.addAttribute("title", "All the users");
-		
-		return "allUsers";
+
+		return "newAllUsers";
 	}
+
 }
