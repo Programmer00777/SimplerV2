@@ -171,14 +171,6 @@ div.error__message {
 
 }
 
-@media (min-width: 280px) and (max-width: 460px) {
-	body {
-		background-image: url("malte-schmidt-enGr5YbjQKQ-unsplash.jpg");
-		background-repeat: no-repeat;
-		background-size: 200%;
-	}
-}
-
 @media (min-width: 401px) and (max-width: 560px) {
 
 	h1.mainText {
