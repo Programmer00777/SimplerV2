@@ -19,7 +19,7 @@ import com.chernikov.simpler.v2.SimplerV2.repositories.UserRepository;
  * Controller for the {@link com.chernikov.simpler.v2.SimplerV2.models.User} entity.
  *
  * @author sergeychernikov
- * @version 2.0
+ * @version 3.0
  */
 
 @Controller
@@ -82,14 +82,14 @@ public class UserController {
 	
 	// returns a view for user updating
 	@GetMapping("/{id}/update")
-	public String updateUser(Model model, @PathVariable("id") Integer id) {
+	public String updateUser(@PathVariable("id") Integer id, Model model) {
 		model.addAttribute("title", "Update user");
 		model.addAttribute("user", userRepository.findById(id));
 		return "updateUser";
 	}
-	
+
 	@PostMapping("/{id}/update")
-    public String update(@ModelAttribute("user") User user, BindingResult bindingResult, @PathVariable("id") Integer id) {
+    public String processUpdateUser(@ModelAttribute("user") @Valid User user, BindingResult bindingResult, @PathVariable("id") Integer id) {
 
 		if (bindingResult.hasErrors()) {
 			return "redirect:/{id}/update";

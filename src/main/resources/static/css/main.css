@@ -193,7 +193,7 @@ tbody tr:hover {
 }
 
 .column1 {
-  width: 260px;
+  width: 110px;
   padding-left: 40px;
 }
 
@@ -207,7 +207,23 @@ tbody tr:hover {
 
 .column4 {
   width: 110px;
-  text-align: right;
+}
+
+.column4 a {
+  color: white;
+  border: solid 1px forestgreen;
+  border-radius: 5px;
+  background-color: forestgreen;
+  padding: 2% 2%;
+  text-decoration: none;
+}
+
+.column4 a:hover {
+  background-color: darkgreen;
+  border: solid 1px darkgreen;
+  transition: .5s;
+  text-decoration: none;
+  color: white;
 }
 
 .column5 {
@@ -264,7 +280,7 @@ tbody tr:hover {
     content: "Email";
   }
   table tbody tr td:nth-child(4):before {
-    content: "Price";
+    content: "Update";
   }
   table tbody tr td:nth-child(5):before {
     content: "Quantity";

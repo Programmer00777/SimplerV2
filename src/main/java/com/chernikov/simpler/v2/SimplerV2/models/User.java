@@ -6,6 +6,12 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+/**
+ * A class that represents a User entity.
+ *
+ * @author sergeychernikov
+ * @version 1.0
+ */
 
 @Entity
 @Table(name = "user")

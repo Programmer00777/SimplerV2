@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
 <head>
-    <title>Table V01</title>
+    <title>All users</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -68,6 +68,7 @@
                                 <th class="column1">User ID</th>
                                 <th class="column2">Name</th>
                                 <th class="column3">Email</th>
+                                <th class="column4">Update</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -75,6 +76,7 @@
                                 <td class="column1" th:text="${user.getId()}"></td>
                                 <td class="column2" th:text="${user.getName()}"></td>
                                 <td class="column3" th:text="${user.getEmail()}"></td>
+                                <td class="column4"><a th:href="@{/{id}/update(id=${user.getId()})}">Update</a></td>
                             </tr>
                         </tbody>
                     </table>
