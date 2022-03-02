@@ -307,11 +307,21 @@ tbody tr:hover {
   tbody tr {
     font-size: 14px;
   }
+
+  .wrap-table100 {
+    width: 1170px;
+    margin-top: 10%;
+  }
 }
 
 @media (max-width: 576px) {
   .container-table100 {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .wrap-table100 {
+    width: 1170px;
+    margin-top: 10%;
   }
 }
